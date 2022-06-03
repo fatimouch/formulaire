@@ -8,16 +8,18 @@ import HomeScreen from '../screnns/HomeScreen';
 import InscripScreen from '../screnns/InscripScreen';
 import InscriptionScreen from '../screnns/InscriptionScreen';
 import LoginScreen from '../screnns/LoginScreen';
-// import SuccessScreen from '../screnns/SuccessScreen';
+import SuccessScreen from '../screnns/SuccessScreen';
+
 
 export default function MainNavigation() {
   return (
-      <NavigationContainer>
-    <Stack.Navigator >
-      <Stack.Screen name="Home" component={HomeScreen} screenOptions={{ headerShown: false}} />
+      <NavigationContainer >
+    <Stack.Navigator screenOptions={{ headerShown: false}} >
+      <Stack.Screen name="Home" component={HomeScreen}  />
       <Stack.Screen name="Retour" component={InscriptionScreen} />
       <Stack.Screen name="Retour2" component={InscripScreen} />
       <Stack.Screen name="Retour3" component={LoginScreen} />
+      {/* <Stack.Screen name="Success" component={SuccessScreen} /> */}
     </Stack.Navigator>
     </NavigationContainer>
   );

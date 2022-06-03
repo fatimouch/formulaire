@@ -42,7 +42,6 @@ export default function App({navigation}) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
   },
   logo: {
     marginTop: 90,
@@ -51,6 +50,8 @@ const styles = StyleSheet.create({
     height: 200,
     resizeMode: "stretch",
     borderRadius: 100,
+    borderColor:"gold",
+    borderWidth: 2,
   },
   button1: {
     alignItems: "center",

@@ -1,32 +1,35 @@
 import React from "react";
-import { SafeAreaView, StyleSheet, TextInput, Text, TouchableOpacity } from "react-native";
+import { SafeAreaView, StyleSheet, TextInput, Text, View, Image, TouchableOpacity, ImageBackground  } from "react-native";
 
-const UselessTextInput = ({navigation}) => {
-  const [text, onChangeText] = React.useState("");
+const InscripScreen = ({navigation}) => {
+ 
 
   return (
     <SafeAreaView>
-        <Text>Email</Text>
+      <View style={styles.row1}>
+          <Text style={styles.titleP}>Hello</Text>
+        <Image style={styles.logo} source={require("../assets/logo.png")} />
+
+      </View>
+        <Text style={styles.title1}>Email</Text>
       <TextInput
         style={styles.input}
-        onChangeText={onChangeText}
-        value={text}
+        
+    
         placeholder="Entrer votre email"
       />
-      <Text>mot de passe</Text>
+      <Text style={styles.title1}>mot de passe</Text>
       <TextInput
         style={styles.input}
-        onChangeText={onChangeText}
+       
         secureTextEntry={true}
-        value={text}
         placeholder="Entrer votre mot de passe"
  
       />
-      <Text>Confirmation du mot de passe</Text>
+      <Text style={styles.title1}>Confirmation mot de passe</Text>
       <TextInput
         style={styles.input}
-        onChangeText={onChangeText}
-        value={text}
+        
         secureTextEntry={true}
         placeholder="Entrer votre mot de passe"
         />
@@ -45,10 +48,52 @@ const UselessTextInput = ({navigation}) => {
 const styles = StyleSheet.create({
   input: {
     height: 40,
+    padding: 20,
     margin: 12,
-    borderWidth: 1,
-    padding: 10,
+    borderWidth: 2,
+    borderColor:"orange",
+    borderRadius:15,
+    color:"orange",
+  },
+  image:{
+    height:844
+},
+title1:{
+  fontSize: 30,
+  marginTop: 20,
+  color:"orange",
+  marginLeft: 20,
+},
+button2: {
+  alignItems: "center",
+  marginTop: 50,
+  marginHorizontal: 70,
+  padding: 10,
+  borderColor: "orange",
+  borderRadius: 40,
+  borderWidth: 2,
+},
+logo: {
+  marginTop: 20,
+  marginRight: 28,
+  width: 100,
+  height: 100,
+  resizeMode: "stretch",
+  borderRadius: 100,
+  borderColor:"gold",
+  borderWidth: 2,
+},
+titleP:{
+  fontFamily: "cursive",
+  fontSize: 70,
+  color: "orange",
+},
+row1:{
+  flexDirection:"row",
+  justifyContent:"space-between",
+  marginTop: 40,
+  marginLeft:10,
   },
 });
 
-export default UselessTextInput;
+export default InscripScreen;
